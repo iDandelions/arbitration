@@ -1,5 +1,3 @@
-#!/usr/bin/python
-         
 class Bet(object):
     
     def __init__(self,name):
@@ -36,18 +34,4 @@ class ArbitrationBet(object):
         self.placeBet.odds  = odds
         self.placeBet.stake = round(((self.LayBet.stake*self.LayBet.odds)+self.LayBet.stake)/(1+odds),2)
 
-
-
-# setup an arbitration bet
-myArbitration = ArbitrationBet('Example Arbitration Bet')
-
-# setup the place bet
-myArbitration.placeBet.odds  = 2.84
-myArbitration.placeBet.stake = 40
-
-# calculate stake needed to equalize profit on win or loose with the lay odds
-myArbitration.calculateLayBetStake(2)
-
-# display the results
-print myArbitration
 
