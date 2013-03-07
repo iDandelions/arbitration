@@ -28,13 +28,13 @@ class ArbitrationBet(object):
         return id    
         
     # Calculate the lay bet stake needed to equalize the profit on both a win and a lose
-    # The place bet and the lay bet odds need to be initialise before calling
+    # The place bet needs to be initialised before calling with the lay odds as the parameter
     def calculateLayBetStake(self,odds):
         self.layBet.odds  = odds
         self.layBet.stake = round(((self.placeBet.stake*self.placeBet.odds)+self.placeBet.stake)/(1+odds),2)
         
     # Calculate the place bet stake needed to equalize the profit on both a win and a lose
-    # The lay bet and the place bet odds need to be initialise before calling
+    # The lay bet needs to be initialised before calling with the place bet odds as the parameter
     def calculatePlaceBetStake(self,odds):
         self.placeBet.odds  = odds
         self.placeBet.stake = round(((self.LayBet.stake*self.LayBet.odds)+self.LayBet.stake)/(1+odds),2)
