@@ -10,7 +10,7 @@ myArbitration.placeBet.odds  = 2.84
 myArbitration.placeBet.stake = 40
 
 # calculate stake needed to equalize profit on win or loose with the lay odds
-myArbitration.calculateLayBetStake(2.6)
+myArbitration.calculateLayBetStake(3)
 
 # display the results
 print myArbitration
