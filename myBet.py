@@ -6,11 +6,11 @@ import arbitration
 myArbitration = arbitration.ArbitrationBet('Example Arbitration Bet')
 
 # setup the place side of the arbitration bet
-myArbitration.placeBet.odds  = 2.84
-myArbitration.placeBet.stake = 40
+myArbitration.placeBet.odds  = 20
+myArbitration.placeBet.stake = 100
 
 # calculate stake needed to equalize profit on win or loose with the lay odds
-myArbitration.calculateLayBetStake(3)
+myArbitration.calculateLayBetStake(10)
 
 # display the results
 print myArbitration
